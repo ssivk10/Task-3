@@ -1,0 +1,71 @@
+//1
+public List<Integer> noNeg(List<Integer> nums) {
+  nums.removeIf(n -> n < 0);
+  return nums;
+}
+
+
+//2
+public List<Integer> no9(List<Integer> nums) {
+  nums.removeIf(n->n%10==9);
+  return nums;
+}
+
+
+
+//3
+public List<Integer> noTeen(List<Integer> nums) {
+  nums.removeIf(n->n>=13&&n<=19);
+  return nums;
+}
+
+
+//4
+public List<String> noZ(List<String> strings) {
+  strings.removeIf(s->s.contains("z"));
+  return strings;
+}
+
+
+
+//5
+public List<String> noLong(List<String> strings) {
+  strings.removeIf(s->s.length()>=4);
+  return strings;
+}
+
+
+
+//6
+public List<String> no34(List<String> strings) {
+  strings.removeIf(s->s.length()==4||s.length()==3);
+  return strings;
+}
+
+
+//7
+public List<String> noYY(List<String> strings) {
+  strings.replaceAll(s->s+"y");
+  strings.removeIf(s->s.contains("yy"));
+  return strings;
+}
+
+
+
+//8
+public List<Integer> two2(List<Integer> nums) {
+  nums.replaceAll(n->n*2);
+  nums.removeIf(n->n%10==2);
+  return nums;
+}
+
+
+//9
+public List<Integer> square56(List<Integer> nums) {
+  nums.replaceAll(n->n*n+10);
+  nums.removeIf(n->n%10==5 || n%10==6);
+  return nums;
+}
+
+
+
